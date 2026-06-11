@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lin-Kernighan Algorithm</title>
+    <link rel="stylesheet" href="../static/webstyle.css">
+</head>
+<body>
+
+
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/opt">2/3 Opt</a>
+        <a href="/antcolony">Ant Colony</a>
+        <a href="/bruteforce">Brute Force</a>
+        <a href="/christofides">Christofides</a>
+        <a href="/heldkarp">Held Karp</a>
+        <a href="/linkernighan">Lin-Kernighan</a>
+        <a href="/insertionalgorithms">Insertion Algorithms</a>
+        <a href="/nearestNeighbour">Nearest Neighbour</a>
+        <a href="/randomisedLocalSearch">Randomised Local Search</a>
+    </div>
+    
+
+
+
+    <div class="content">
+        <h1 class="centered-text">Lin-Kernighan Algorithm</h1>
+        <p> The Lin-Kernighan algorithm is a local search and optimization algorithm used to improve existing solutions to the TSP. It aims to find better tour arrangements by iteratively applying a sequence of transformations to the tour.  <span style="font-style: italic;">O(n<sup>3</sup>)</span></p>
+        <h2>How it works:</h2>
+        <ul>
+            <li>Initial Tour: The algorithm begins with an initial TSP tour. This tour can be obtained from any method, such as heuristics or approximation algorithms.</li>
+            <li>Tour Transformations: Lin-Kernighan iteratively applies a series of tour transformations. These transformations involve breaking and reconnecting parts of the tour to create alternative tour configurations.</li>
+            <li>Improvement Criteria: The algorithm evaluates the quality of the newly generated tours and keeps track of the best solution found so far.</li>
+            <li>Local Search: Lin-Kernighan uses a local search strategy to explore neighborhoods of the tour space, seeking tours with shorter total distances. It applies transformations until it no longer finds any tour that improves upon the current best solution.</li>
+            <li>Termination: The algorithm terminates when no further improvement can be made, and the best solution found is returned as the final TSP tour.</li>
+        </ul>
+
+
+
+
+        <div class="advantages">
+            <h2>Advantages:</h2>
+            <ul>
+                <li>Optimization: Lin-Kernighan is effective in improving the quality of existing TSP solutions. It can be applied to refine tours obtained from other methods.</li>
+                <li>Fast Execution: It has a reasonable time complexity compared to exact algorithms like Held-Karp, making it suitable for moderately sized TSP instances.</li>            
+            </ul>
+        </div>
+
+
+
+        
+        <div class="disadvantages">
+            <h2>Limitations:</h2>
+            <ul>
+                <li>No Optimality Guarantee: Unlike exact algorithms, Lin-Kernighan does not guarantee an optimal solution. It seeks to improve existing solutions but may not always find the absolute best tour.</li>
+                <li>Sensitivity to Initial Solutions: The quality of the final tour can be sensitive to the quality of the initial solution provided.</li>
+                <li>Limited to Local Optima: Lin-Kernighan is a local search method, and it may get stuck in local optima, meaning it won't explore the entire solution space.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

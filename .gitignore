@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+Scripts/
+Lib/
+Include/
+pyvenv.cfg
+
+# Runtime files
+*.db
+logfile.txt
+logfile2.txt
+
+# Saved graphs
+src/Graphs/
+*.graph
+
+# OS
+.DS_Store
+Thumbs.db
+src/.vscode/

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ant Colony Optimization</title>
+    <link rel="stylesheet" href="../static/webstyle.css">
+</head>
+
+
+
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/opt">2/3 Opt</a>
+        <a href="/antcolony">Ant Colony</a>
+        <a href="/bruteforce">Brute Force</a>
+        <a href="/christofides">Christofides</a>
+        <a href="/heldkarp">Held Karp</a>
+        <a href="/linkernighan">Lin-Kernighan</a>
+        <a href="/insertionalgorithms">Insertion Algorithms</a>
+        <a href="/nearestNeighbour">Nearest Neighbour</a>
+        <a href="/randomisedLocalSearch">Randomised Local Search</a>
+    </div>
+    
+
+
+    <div class="content">
+        <h1 class="centered-text">Ant Colony Optimization Algorithm</h1>
+        <p>
+            The ACO algorithm is a heuristic optimization technique inspired by the navigation behaviour of ants. It's used to find the best or near-best solution for the TSP. Its time complexity is approximately: O(iterations * num_ants * n), where:
+        </p>
+        <ul style="list-style-type:disc; font-size: larger;">
+            <li><b>iterations</b> is the number of iterations.</li>
+            <li><b>num_ants</b> is the number of ants.</li>
+            <li><b>n</b> is the number of cities.</li>
+
+
+
+        </ul>
+        <h2>How it works: </h2>
+
+        <ul style="list-style-type:disc; font-size: medium">
+            <li><b>Ant Movement:</b> A population of artificial ants is simulated. Each ant starts at a random city and chooses its next city based on a combination of two factors: the amount of pheromone on a path and the distance to the city. Parameters called alpha and beta control the influence of these factors. Ants prefer paths with more pheromone and shorter distances.</li>
+            <li><b>Pheromone Update:</b> After all ants complete their tours, the algorithm updates the pheromone levels on the paths. Pheromone gradually evaporates, simulating the real-life process. Additionally, elite ants, which found shorter paths, deposit more pheromone on their routes.</li>
+            <li><b>Iterations:</b> The above steps are repeated for a set number of iterations. Over time, the pheromone trail evolves to guide ants to better paths.</li>
+            <li><b>Best Tour:</b> The algorithm keeps track of the best tour found so far, which represents the shortest path that visits all cities.</li>
+            <li><b>Completion:</b> At the end of the process, the algorithm returns the best tour as the solution to the TSP.</li>
+        </ul>
+        
+ 
+        <div class="advantages">
+            <h3>Advantages:</h3>
+            <ul>
+                <li>ACO can find high-quality solutions to complex optimization problems.</li>
+                <li>It can handle problems where bruteforce would be impractical due to the large number of possible solutions.</li>
+            </ul>
+        </div>
+
+
+        <div class="disadvantages">
+            <h3>Limitations:</h3>
+            <ul>
+                <li>ACO is a stochastic algorithm, so it may not always find the optimal solution but rather a good approximation.</li>
+                <li>The performance of ACO depends on the appropriate selection of parameters (alpha, beta, evaporation rate) and the number of ants.</li>
+                <li>It may require a large number of iterations to converge to a good solution, which can be time-consuming for some problems</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brute Force Algorithm</title>
+    <link rel="stylesheet" href="../static/webstyle.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/opt">2/3 Opt</a>
+        <a href="/antcolony">Ant Colony</a>
+        <a href="/bruteforce">Brute Force</a>
+        <a href="/christofides">Christofides</a>
+        <a href="/heldkarp">Held Karp</a>
+        <a href="/linkernighan">Lin-Kernighan</a>
+        <a href="/insertionalgorithms">Insertion Algorithms</a>
+        <a href="/nearestNeighbour">Nearest Neighbour</a>
+        <a href="/randomisedLocalSearch">Randomised Local Search</a>
+    </div>
+    
+
+
+    
+    <div class="content">
+        <h1 class="centered-text">Brute Force Algorithm</h1>
+        <p>The brute force algorithm explores all possible city permutations to find the shortest tour. It calculates the total distance for each permutation and selects the one with the minimum distance as the optimal solution. While it guarantees an optimal result, this method is computationally intensive and impractical for large TSP instances due to its factorial time complexity. O(n!)</p>
+        
+
+
+
+        <h2>How it works: </h2>
+        <ul style="list-style-type:disc; font-size: medium">
+            <li><b>Generate Permutations:</b> The brute force approach involves generating all possible permutations of cities. These permutations represent different orders in which the salesman can visit the cities.</li>
+            <li><b>Calculate Total Distance:</b> For each permutation, calculate the total distance or cost of the tour. This distance is the sum of the distances between consecutive cities in the permutation, considering the path from the starting city to the last city and back to the starting city.</li>
+            <li><b>Find the Optimal Solution:</b> Out of all the permutations, select the one with the minimum total distance. This permutation represents the optimal solution to the TSP.</li>
+        </ul>
+
+
+
+
+        <div class="advantages">
+            <h3>Advantages:</h3>
+            <ul>
+                <li><b>Optimal Solution:</b> The brute force approach guarantees an optimal solution. It systematically explores all possible solutions, ensuring that the best one is found.</li>
+                <li><b>Conceptual Simplicity:</b> The concept behind this method is simple and easy to understand. It's a straightforward approach that doesn't require complex algorithms or heuristics.li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="disadvantages">
+            <h3>Limitations:</h3>
+            <ul>
+                <li><b>Inefficiency for Large Instances:</b> Due to its computational demands, the brute force approach is inefficient for TSP instances with a large number of cities. It becomes impractical to explore all permutations in a reasonable amount of time.</li>
+                <li><b>Not Scalable:</b> The brute force approach does not scale well, making it unsuitable for real-world scenarios with a significant number of cities.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

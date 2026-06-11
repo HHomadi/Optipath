@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christofides Algorithm</title>
+    <link rel="stylesheet" href="../static/webstyle.css">
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/opt">2/3 Opt</a>
+        <a href="/antcolony">Ant Colony</a>
+        <a href="/bruteforce">Brute Force</a>
+        <a href="/christofides">Christofides</a>
+        <a href="/heldkarp">Held Karp</a>
+        <a href="/linkernighan">Lin-Kernighan</a>
+        <a href="/insertionalgorithms">Insertion Algorithms</a>
+        <a href="/nearestNeighbour">Nearest Neighbour</a>
+        <a href="/randomisedLocalSearch">Randomised Local Search</a>
+    </div>
+    
+
+
+    
+    <div class="content">
+        <h1 class="centered-text">Christofides Algorithm</h1>
+        <p>
+            The Christofides algorithm is an approximation algorithm used to solve the TSP. It provides a way to find an approximate solution that is guaranteed to be within 3/2 the length of the optimal solution. It has a time complexity of  <span style="font-style: italic;">O(n<sup>3</sup>)</span>.
+        </p>
+
+        <h2>How it works: </h2>
+        <ul style="list-style-type:disc">
+            <li>Construct a minimum spanning tree (MST) of the given set of cities.</li>
+            <li>Identify the set of vertices with odd degrees in the MST, forming a set of odd-degree vertices.</li>
+            <li>Find a minimum-weight perfect matching for these odd-degree vertices in a subgraph.</li>
+            <li>Combine the MST and the perfect matching to create a multigraph.</li>
+            <li>Find an Eulerian tour in this multigraph.</li>
+            <li>Convert the Eulerian tour into a Hamiltonian tour by shortcutting.</li>
+          </ul>
+
+
+
+
+        <div class="advantages">
+            <h2>Advantages:</h2>
+            <ul>
+                <li>The Christofides algorithm guarantees a solution within 3/2 times the length of the optimal TSP tour.</li>
+                <li>It has a polynomial time complexity, making it efficient for moderately sized instances of the TSP.</li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="disadvantages">
+            <h2>Limitations:</h2>
+            <ul>
+                <li>While the algorithm guarantees a reasonably good approximation, it may not always produce the optimal solution.</li>
+                <li>The algorithm involves complex steps, which can be challenging to implement and understand.</li>
+                <li>The performance may vary depending on the characteristics of the TSP instance, and there are cases where the approximation factor is not as good as 3/2.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

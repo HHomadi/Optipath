@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomised Local Search Algorithm</title>
+    <link rel="stylesheet" href="../static/webstyle.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/opt">2/3 Opt</a>
+        <a href="/antcolony">Ant Colony</a>
+        <a href="/bruteforce">Brute Force</a>
+        <a href="/christofides">Christofides</a>
+        <a href="/heldkarp">Held Karp</a>
+        <a href="/linkernighan">Lin-Kernighan</a>
+        <a href="/insertionalgorithms">Insertion Algorithms</a>
+        <a href="/nearestNeighbour">Nearest Neighbour</a>
+        <a href="/randomisedLocalSearch">Randomised Local Search</a>
+    </div>
+    
+
+
+
+    <div class="content">
+        <h1>Randomised Local Search</h1>
+        <p>
+            The Randomised Local Search algorithm starts with a random permutation of cities as the initial tour. It then makes random swaps of cities in the tour. After each swap, the tour's length is evaluated, and if the new tour is shorter, it is accepted as the current solution. <span style="font-style: italic;">O(n<sup>2</sup>)</span>
+        </p>
+        <h2>How it works:</h2>
+        <ul>
+            <li>
+                Initialization: Starts with a tour of a random permutation of cities
+            </li>
+            <li>
+                Random Neighbor Generation: It generates neighboring solutions by making random pairwise swaps of cities in the tour. These swaps are done iteratively to explore different tour arrangements. </li>
+            <li>
+                Evaluation and Acceptance: After each swap, the algorithm evaluates the tour's length. If the new tour is shorter than the previous one, it is accepted as the current solution. Otherwise, it may be accepted with a certain probability based on the difference in tour lengths.</li>
+            <li>
+                Termination: The process of generating and evaluating random neighbors continues for a predefined number of iterations or until no further improvements can be made.
+            </li>
+        </ul>
+
+
+
+
+        <div class="advantages">
+            <h3>Advantages of Randomised Local Search Algorithm:</h3>
+            <ul>
+                <li>
+                    Exploratory: The Randomised Local Search algorithm explores a wide range of tour configurations, which can help in escaping local optima and finding better solutions.
+
+                </li>
+                <li>
+                    Adaptability: It can be applied to different initial tours, making it adaptable to different scenarios.
+                </li>
+            </ul>
+        </div>
+
+
+        
+        <div class="disadvantages">
+            <h3>Disadvantages of Randomised Local Search Algorithm:</h3>
+            <ul>
+                <li>
+                    Stochastic Nature: The results of the Randomised Local Search algorithm can vary due to its stochastic nature. There is no guarantee that it will find the optimal solution.
+                </li>
+                <li>
+                    Time and Iteration Sensitivity: The quality of the solution can be influenced by the number of iterations and the probability of accepting worse solutions.
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

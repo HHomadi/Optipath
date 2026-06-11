@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighbour Algorithms</title>
+    <link rel="stylesheet" href="../static/webstyle.css">
+</head>
+<body>
+
+
+    
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/opt">2/3 Opt</a>
+        <a href="/antcolony">Ant Colony</a>
+        <a href="/bruteforce">Brute Force</a>
+        <a href="/christofides">Christofides</a>
+        <a href="/heldkarp">Held Karp</a>
+        <a href="/linkernighan">Lin-Kernighan</a>
+        <a href="/insertionalgorithms">Insertion Algorithms</a>
+        <a href="/nearestNeighbour">Nearest Neighbour</a>
+        <a href="/randomisedLocalSearch">Randomised Local Search</a>
+    </div>
+    
+
+
+
+    <div class="content">
+        <h1>Nearest Neighbour Algorithm</h1>
+        <p>
+            The Nearest Neighbor algorithm iteratively chooses the nearest/cheapest unvisited city to the current city and adds it to the tour. This process continues until all cities are included in the tour, and it returns to the starting city to complete the tour.  <span style="font-style: italic;">O(n<sup>2</sup>)</span>
+        </p>
+        <h2>How it works:</h2>
+        <ul>
+            <li>Initialization: The algorithm starts by selecting an arbitrary city as the starting point.</li>
+            <li>Greedy Selection: It then repeatedly selects the nearest unvisited city to the current city and adds it to the tour. This process continues until all cities are included in the tour </li>
+            <li>Return to Starting Point: Once all cities are visited, the algorithm returns to the starting city, completing the tour.</li>
+        </ul>
+
+
+
+
+        <div class="advantages">
+            <h3>Advantages of Nearest Neighbour Algorithm:</h3>
+            <ul>
+                <li>Simplicity: The Nearest Neighbor algorithm is simple and easy to implement, making it a quick heuristic for obtaining TSP solutions.</li>
+                <li>Efficiency: It has a time complexity of O(n2), where n is the number of cities, which makes it suitable for moderately sized TSP instances.</li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="disadvantages">
+            <h3>Disadvantages of Nearest Neighbour Algorithm:</h3>
+            <ul>
+                <li>Suboptimal Solutions: Nearest Neighbor does not guarantee an optimal solution and often produces suboptimal tours. The chosen starting city can impact the total cost.</li>
+                <li>Sensitivity to Initial Choice: The choice of the initial city can lead to significantly different tour lengths, making it sensitive to the starting point.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

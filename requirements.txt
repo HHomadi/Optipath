@@ -1,0 +1,4 @@
+Flask>=2.0
+numpy>=1.20
+PyQt5>=5.15
+PyQtWebEngine>=5.15

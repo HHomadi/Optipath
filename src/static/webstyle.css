@@ -1,0 +1,89 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1D1D1F;
+    color: #F5F5F7;
+}
+
+.navbar {
+    background-color: #000000;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #F5F5F7;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #2C2C2E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+strong {
+    color: #FFFFFF;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    margin-bottom: 10px;
+}
+
+.advantages {
+    background-color: #333333;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.disadvantages {
+    background-color: #444444;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.advantages h3, .disadvantages h3 {
+    color: #FFFFFF;
+}

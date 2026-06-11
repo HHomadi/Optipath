@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Algorithms</title>
+    <link rel="stylesheet" href="../static/webstyle.css">
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/opt">2/3 Opt</a>
+        <a href="/antcolony">Ant Colony</a>
+        <a href="/bruteforce">Brute Force</a>
+        <a href="/christofides">Christofides</a>
+        <a href="/heldkarp">Held Karp</a>
+        <a href="/linkernighan">Lin-Kernighan</a>
+        <a href="/insertionalgorithms">Insertion Algorithms</a>
+        <a href="/nearestNeighbour">Nearest Neighbour</a>
+        <a href="/randomisedLocalSearch">Randomised Local Search</a>
+    </div>
+    
+
+
+
+    <div class="content">
+        <h1>Insertion Algorithms</h1>
+        
+        <h2 class="centered-text">Random Insertion</h2>
+        <p>The Random Insertion heuristic involves randomly selecting the next city to insert into the tour from the remaining unvisited cities. It repeats this process until all cities are included in the tour.  <span style="font-style: italic;">O(n<sup>2</sup>)</span></p>
+
+        <div class="advantages">
+            <h3>Advantages of Random Insertion:</h3>
+            <ul>
+                <li>Efficiency: Nearest Insertion has a moderate time complexity, making it efficient for moderately sized TSP instances.</li>
+                <li>Simple to Implement: It is easy to implement due to its simplicity. </li>
+            </ul>
+        </div>
+
+        <div class="disadvantages">
+            <h3>Disadvantages of Random Insertion:</h3>
+            <ul>
+                <li>No Control Over Solution Quality: Random Insertion does not guarantee a particular solution quality and may result in suboptimal tours.</li>
+                <li>Accuracy : The random nature of this method can make it inaccurate for larger TSP instances, as it lacks the optimization focus of other heuristics.</li>
+            </ul>
+        </div>
+
+
+
+
+        <h2 class="centered-text">Nearest Insertion</h2>
+        <p> The Nearest Insertion heuristic starts with two cities in the tour and then iteratively inserts the city that is nearest to the current tour. It aims to minimize the distance from the added city to the nearest city in the tour. <span style="font-style: italic;">O(n<sup>2</sup>)</span></p>
+        <div class="advantages">
+            <h3>Advantages of Nearest Insertion:</h3>
+            <ul>
+                <li>Efficiency: Nearest Insertion has a moderate time complexity, making it efficient for moderately sized TSP instances.</li>
+                <li>Simple to Implement: It is easy to implement due to its simplicity.</li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="disadvantages">
+            <h3>Disadvantages of Nearest Insertion:</h3>
+            <ul>
+                <li>Suboptimal Solutions: Nearest Insertion does not guarantee an optimal tour and often produces suboptimal solutions.</li>
+                <li>Sensitivity to Initial Cities: The choice of the initial two cities can impact the tour quality.</li>
+                <li>May Create Subtours: It may lead to the formation of subtours within the tour, requiring further steps to resolve. </li>
+            </ul>
+        </div>
+
+
+
+
+        <h2 class="centered-text">Farthest Insertion</h2>
+        <p>
+            The Farthest Insertion heuristic starts with one city in the tour and then iteratively inserts the city that is farthest from the existing tour. <span style="font-style: italic;">O(n<sup>2</sup>)</span>
+        </p>
+
+
+
+        <div class="advantages">
+            <h3>Advantages of Farthest Insertion:</h3>
+            <ul>
+                <li>Efficiency: It has a moderate time complexity, making it suitable for moderately sized TSP instances.</li>
+                <li>Simple to Implement: It is easy to implement due to its simplicity.</li>
+            </ul>
+        </div>
+
+
+
+        <div class="disadvantages">
+            <h3>Disadvantages of Farthest Insertion:</h3>
+            <ul>
+                <li>No Optimality Guarantee: Farthest Insertion does not guarantee the discovery of an optimal tour and often produces suboptimal solutions.</li>
+                <li>Sensitivity to Initial City: The quality of the tour can be sensitive to the choice of the initial city.</li>
+                <li>May Create Subtours: It may lead to the formation of subtours within the tour, requiring further steps to resolve.</li>
+            </ul>
+        </div>
+
+
+        
+        <h2 class="centered-text">Cheapest Insertion</h2>
+        <p>
+            The Cheapest Insertion heuristic is a method for constructing a tour. It begins with one city in the tour and then iteratively inserts the city that results in the shortest added distance at each step. This process continues until all cities are included in the tour. <span style="font-style: italic;">O(n<sup>2</sup>)</span>
+        </p>
+
+        <div class="advantages">
+            <h3>Advantages of Cheapest Insertion:</h3>
+            <ul>
+                <li>Simple Concept: The Cheapest Insertion heuristic is straightforward to understand and implement.</li>
+                <li>Efficiency: It has a moderate time complexity, making it efficient for moderately sized TSP instances.</li>
+            </ul>
+            <h3>Disadvantages of Cheapest Insertion:</h3>
+            <ul>
+                <li>Suboptimal Solutions: Cheapest Insertion does not guarantee an optimal tour and often produces suboptimal solutions.</li>
+                <li>Sensitivity to Initial City: The choice of the initial city can significantly affect the quality of the tour.</li>
+            </ul>
+
+
+
+
+
+

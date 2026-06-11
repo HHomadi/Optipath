@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-Opt and 3-Opt Algorithms</title>
+    <link rel="stylesheet" href="../static/webstyle.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/opt">2/3 Opt</a>
+        <a href="/antcolony">Ant Colony</a>
+        <a href="/bruteforce">Brute Force</a>
+        <a href="/christofides">Christofides</a>
+        <a href="/heldkarp">Held Karp</a>
+        <a href="/linkernighan">Lin-Kernighan</a>
+        <a href="/insertionalgorithms">Insertion Algorithms</a>
+        <a href="/nearestNeighbour">Nearest Neighbour</a>
+        <a href="/randomisedLocalSearch">Randomised Local Search</a>
+    </div>
+    
+
+
+    
+    <div class="content">
+        <h1>2-Opt and 3-Opt Algorithms</h1>
+        
+
+
+        <h2 class="centered-text">2-Opt Algorithm</h2>
+        <p>
+            The 2-opt algorithm is a local search method used to improve existing TSP tour solutions. It works by iteratively swapping pairs of edges in the tour, with the goal of reducing the total tour length. Unlike some other local search methods, 2-opt operates by removing two edges and reconnecting the tour with two different edges. <span style="font-style: italic;">O(n<sup>2</sup>)</span> 
+        </p>
+        <h3> How it works:</h3>
+        <ul> 
+            <li>Initialization: The algorithm starts with an initial tour. This tour is generated as a list of integers representing the nodes.</li>
+            <li>2-Opt Swap: 2-opt explores neighboring solutions by selecting two edges in the tour and then reconnecting the cities in a way that creates a new tour. If this new tour is shorter than the previous one, it is accepted as the current solution.</li>
+            <li>Iterative Improvement: The 2-opt algorithm iteratively applies these edge swaps to explore different tour configurations. The process continues until no further improvement can be made.</li>
+            <li>Termination: The algorithm terminates when no more beneficial edge swaps can be found, and it returns the best solution found as the final tour.</li>
+        </ul>
+
+
+
+
+        <div class="advantages">
+            <h3>Advantages of 2-Opt Algorithm:</h3>
+            <ul>
+                <li>Local Optimization: The 2-opt algorithm effectively optimizes existing TSP solutions by iteratively removing and reconnecting edges, often leading to better tour lengths.</li>
+                <li>Adaptability: It can be applied to different initial tours, making it adaptable to various scenarios and tour configurations.</li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="disadvantages">
+            <h3>Disadvantages of 2-Opt Algorithm:</h3>
+            <ul>
+                <li>No Optimality Guarantee: Like other local search methods, 2-opt does not guarantee an optimal solution, and it may not always find the absolute best tour.</li>
+                <li>Sensitivity to Initial Solution: The quality of the final tour can be sensitive to the quality of the initial solution provided.</li>
+                <li>Time and Iteration Sensitivity: The effectiveness of 2-opt can depend on the number of iterations and the chosen edge swapping strategy. Careful parameter tuning may be needed for optimal results.</li>
+            </ul>
+        </div>
+        
+
+
+        <h2 class="centered-text">3-Opt Algorithm</h2>
+        <p>
+            The 3-Opt algorithm is a local search technique used to improve existing solutions to the TSP. It's an extension of the 2-Opt algorithm and operates by iteratively swapping sets of three edges in the tour to optimize the tour length. <span style="font-style: italic;">O(n<sup>3</sup>)</span>
+        </p>
+        <h3>How it works:</h3>
+        <ul>
+            <li>Initialization: The algorithm starts with an initial tour. This tour is generated as a list of integers representing the nodes.</li>
+            <li>Edge Triplet Swapping: The algorithm iteratively selects sets of three edges in the tour and reconnects the cities to create a new tour configuration. If the new tour is shorter than the previous one, it is accepted as the current solution. The process continues until no further improvements can be made.</li>
+            <li>Iterative Refinement: 3-Opt refines the tour by exploring different combinations of edge triplet swaps. It aims to find a tour arrangement that minimizes the total tour length.</li>
+            <li>Termination: The algorithm terminates when no more beneficial edge triplet swaps can be identified, and the best solution found is returned as the final tour.</li>
+        </ul>
+
+
+
+        <div class="advantages">
+            <h3>Advantages of 3-Opt Algorithm:</h3>
+            <ul>
+                <li>Local Optimization: The 3-Opt algorithm is effective at optimizing existing TSP solutions by considering more complex edge rearrangements compared to 2-Opt. This can lead to shorter tour lengths.</li>
+                <li>Adaptability: Similar to 2-Opt, 3-Opt can be applied to various initial tours, making it versatile and suitable for different scenarios and tour configurations.</li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="disadvantages">
+            <h3>Disadvantages of 3-Opt Algorithm:</h3>
+            <ul>
+                <li>No Optimality Guarantee: Like 2-Opt and other local search methods, 3-Opt does not guarantee the discovery of an optimal solution. It may not always find the absolute best tour.</li>
+                <li>Computationally Intensive: 3-Opt can be more computationally intensive than 2-Opt due to the greater number of possible edge triplet swaps to explore. This may lead to longer execution times, especially for large TSP instances.</li>
+                <li>Parameter Sensitivity: The effectiveness of 3-Opt can depend on factors such as the number of iterations and the chosen edge-triplet-swapping strategy, requiring careful parameter tuning for optimal results.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

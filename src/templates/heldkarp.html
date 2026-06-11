@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Held-Karp Algorithm</title>
+    <link rel="stylesheet" href="../static/webstyle.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/opt">2/3 Opt</a>
+        <a href="/antcolony">Ant Colony</a>
+        <a href="/bruteforce">Brute Force</a>
+        <a href="/christofides">Christofides</a>
+        <a href="/heldkarp">Held Karp</a>
+        <a href="/linkernighan">Lin-Kernighan</a>
+        <a href="/insertionalgorithms">Insertion Algorithms</a>
+        <a href="/nearestNeighbour">Nearest Neighbour</a>
+        <a href="/randomisedLocalSearch">Randomised Local Search</a>
+    </div>
+    
+
+
+
+    <div class="content">
+        <h1 class="centered-text">Held-Karp Algorithm</h1>
+        <p> The Held-Karp algorithm, also known as the dynamic programming approach, is used to find the exact optimal solution. It works by systematically computing and storing the shortest path lengths for all possible combinations of cities in a dynamic programming table, ensuring a guaranteed optimal result.  <span style="font-style: italic;">O(n<sup>2</sup> * 2<sup>n</sup>)</span> </p>
+        <h2>How it works</h2>
+
+
+
+        <ul>
+            <li><b>Initialization:</b> The algorithm initialises a dynamic programming table with the smallest subproblem size, where only two cities are considered. It calculates the distance between these two cities and stores it.</li>
+            <li><b>Dynamic Programming Iteration:</b> The Held-Karp algorithm iteratively fills the dynamic programming table. It systematically considers larger subproblems by incrementally adding more cities to the combinations. It computes the shortest path lengths for all possible combinations of cities and stores them in the table.</li>   
+            <li><b>Optimal Tour Reconstruction:</b> Once the table is fully populated, the algorithm reconstructs the optimal tour by backtracking through the table. It starts at the starting city, considers all possible next cities, and chooses the one that leads to the shortest tour.</li>
+            <li><b>Optimal Solution:</b> The final result is the optimal TSP tour with the shortest total distance.</li>
+        </ul>
+
+
+
+        <div class="advantages">
+            <h2>Advantages:</h2>
+            <ul>
+                <li>Optimal Solution: The Held-Karp algorithm guarantees an exact optimal solution for the TSP, making it a reliable choice when optimality is crucial.</li>
+                <li>Versatility: It can handle TSP instances of varying sizes and complexities, making it suitable for a wide range of scenarios.</li>
+            </ul>
+        </div>
+
+
+        
+        <div class="disadvantages">
+            <h2>Limitations:</h2>
+            <ul>
+                <li>Exponential Time Complexity: The main drawback of the Held-Karp algorithm is its exponential time complexity, which makes it impractical for large TSP instances. The number of subproblems grows exponentially with the number of cities.</li>
+                <li>Memory Requirements: The algorithm requires significant memory to store the dynamic programming table, which can be a limiting factor for large TSP instances.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
